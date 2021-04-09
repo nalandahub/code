@@ -4,7 +4,14 @@
 
 
 ## 4. Configure nginx
-<p>In this example as per question, i assume http://0.0.0.0:8081,http://0.0.0.0:8082,http://0.0.0.0:8083,http://0.0.0.0:8084,http://0.0.0.0:8085 are working services. http://0.0.0.0:8080/health will post the health check.</p>
+<p>In this example as per question, i assume below urls 
+  http://0.0.0.0:8081,
+  http://0.0.0.0:8082,
+  http://0.0.0.0:8083,
+  http://0.0.0.0:8084,
+  http://0.0.0.0:8085 are working services.
+  
+  http://0.0.0.0:8080/health will post the health check.</p>
 
   #### For SSL below lines are used in nginx configuration.
   ```
