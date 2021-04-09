@@ -1,6 +1,20 @@
-# code
+# How to run this?
 
-
+1. Install chef-client in Centos machine
+    ```
+     curl -L https://omnitruck.chef.io/install.sh | sudo bash
+    ```
+2. download this cookbook & move it to /root/.chef/cookbooks directory, if it's not exists create it. 
+    ```
+    # git clone https://github.com/nalandahub/code.git
+    # mkdir -p /root/.chef/cookbooks
+    # cp -R code/  /root/.chef/cookbooks/
+    ```
+3. Change your directory and run the chef cookbook locally.
+   ```
+   # cd /root/.chef/cookbooks
+   #chef-client -z -o code
+   ```
 
 
 ## 4. Configure nginx
