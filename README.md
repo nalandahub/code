@@ -41,3 +41,31 @@
 
 
 ## 5. Build RPM for printing Awe$ome in command line.
+
+1 . Install requrired packages to build rpm
+    ```
+     yum install gcc rpm-build rpm-devel rpmlint make python bash coreutils diffutils patch rpmdevtools -y
+    ```
+2. Create a spec file.
+    ```
+    As mentioned in https://github.com/nalandahub/code/blob/main/awesome.spec
+    ```
+3.  Now, build the RPM
+    ```
+    #rpmdev-setuptree; 
+    #rpmbuild -ba awesome.spec ;
+    ```
+4. Install the RPM
+    ```
+    #rpm -ivh /root/rpmbuild/RPMS/x86_64/awesome-1-1.x86_64.rpm
+    ```
+5. Check if it's working.
+    ```
+    [root@centos ~]# awesome.sh
+    Awe$ome
+    [root@centos ~]#
+    ```
+6. Uninstall.
+    ```
+    #rpm -e awesome-1-1.x86_64
+    ```
