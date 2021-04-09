@@ -1,0 +1,32 @@
+
+#In upstream it is always recommanded to use actual IP(ex 192.168.56.102) instead of 127.0.0.1 or 0.0.0.0 or localhost
+    upstream backend {
+        server  0.0.0.0:8081;
+        server  0.0.0.0:8082;
+        server  0.0.0.0:8083;
+        server  0.0.0.0:8084;
+        server  0.0.0.0:8085;
+
+ 
+    }
+
+    upstream health_backend {
+        server  0.0.0.0:8080;
+    }
+
+#Certificates should be properly generated.
+    server {
+        listen  443 ssl;
+        ssl_certificate     /etc/ssl/certs/test/server.crt;
+        ssl_certificate_key /etc/ssl/certs/test/server.key;
+
+        location /health {
+            proxy_pass http://health_backend;
+
+        }
+
+
+      location / {
+        proxy_pass http://backend;
+        }
+}
