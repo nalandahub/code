@@ -8,4 +8,5 @@ end
 rpm_package 'awesome' do
    action :install
    source '/root/.chef/cookbooks/code/awesome-1-1.x86_64.rpm'
+  #source can be https://raw.githubusercontent.com/nalandahub/code/main/code/awesome-1-1.x86_64.rpm if it's using URL instead of local file.
 end
