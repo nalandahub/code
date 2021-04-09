@@ -94,3 +94,4 @@
     ```
     #rpm -e awesome-1-1.x86_64
     ```
+ref : https://rpm-packaging-guide.github.io/
